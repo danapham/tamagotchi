@@ -32,9 +32,15 @@ const activities = [
 const getActivities = () => activities;
 
 const getActivityObj = (type) => {
-  const activityObj = activities.filter((activity) => activity.type === type);
+  let activityObj = {};
 
-  return activityObj[0];
+  for (let i = 0; i < activities.length; i += 1) {
+    if (activities[i].type === type) {
+      activityObj.push(activities[i]);
+    } else {
+      activityObj = {};
+    }
+  }
 };
 
 export default { getActivityObj, getActivities };

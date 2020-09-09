@@ -73,6 +73,30 @@ const buttonEvents = () => {
 
     domManipulation.updateQuadrantValue('fight');
   });
+
+  $('#button1-sleep').click(() => {
+    const sleepObj = data.getActivityObj('sleep');
+
+    if (sleepObj.value + 50 > 100) {
+      sleepObj.value = 100;
+    } else if (sleepObj.value + 50 <= 100) {
+      sleepObj.value += 50;
+    }
+
+    domManipulation.updateQuadrantValue('sleep');
+  });
+
+  $('#button2-sleep').click(() => {
+    const sleepObj = data.getActivityObj('sleep');
+
+    if (sleepObj.value + 60 > 100) {
+      sleepObj.value = 100;
+    } else if (sleepObj.value + 60 <= 100) {
+      sleepObj.value += 60;
+    }
+
+    domManipulation.updateQuadrantValue('sleep');
+  });
 };
 
 export default { buttonEvents };

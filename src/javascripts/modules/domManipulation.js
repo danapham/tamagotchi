@@ -6,9 +6,15 @@ const displayDiv = (divId) => {
   $(`#${divId}`).html(`
   <h1>${activity.type.charAt(0).toUpperCase() + activity.type.slice(1)}</h1>
   <h2>${activity.description}:</h2>
-  <h3>${activity.value}</h3>
+  <h3 id="${divId}Value">${activity.value}</h3>
   <button id="button1-${divId}">${activity.button1}</button>
   <button id="button2-${divId}">${activity.button2}</button>`);
 };
 
-export default { displayDiv };
+const updateQuadrantValue = (divId) => {
+  const activityObj = data.getActivityObj(divId);
+
+  $(`#${divId}Value`).text(`${activityObj.value}`);
+};
+
+export default { displayDiv, updateQuadrantValue };

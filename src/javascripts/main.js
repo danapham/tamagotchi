@@ -1,8 +1,8 @@
 import '../styles/main.scss';
-import eat from './modules/eat';
+import displayDom from './modules/displayDom';
 
 const init = () => {
-  eat.displayEatDiv('eat');
+  displayDom.showQuadrants();
 };
 
 init();

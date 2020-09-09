@@ -43,6 +43,4 @@ const getActivityObj = (type) => {
   return activityObj;
 };
 
-const updateValue = ()
-
 export default { getActivityObj, getActivities };

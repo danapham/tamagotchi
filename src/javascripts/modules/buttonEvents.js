@@ -25,6 +25,30 @@ const buttonEvents = () => {
 
     domManipulation.updateQuadrantValue('eat');
   });
+
+  $('#button1-play').click(() => {
+    const playObj = data.getActivityObj('play');
+
+    if (playObj.value + 2 > 100) {
+      playObj.value = 100;
+    } else if (playObj.value + 2 <= 100) {
+      playObj.value += 2;
+    }
+
+    domManipulation.updateQuadrantValue('play');
+  });
+
+  $('#button2-play').click(() => {
+    const playObj = data.getActivityObj('play');
+
+    if (playObj.value + 50 > 100) {
+      playObj.value = 100;
+    } else if (playObj.value + 50 <= 100) {
+      playObj.value += 50;
+    }
+
+    domManipulation.updateQuadrantValue('play');
+  });
 };
 
 export default { buttonEvents };

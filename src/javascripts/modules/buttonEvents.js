@@ -49,6 +49,30 @@ const buttonEvents = () => {
 
     domManipulation.updateQuadrantValue('play');
   });
+
+  $('#button1-fight').click(() => {
+    const fightObj = data.getActivityObj('fight');
+
+    if (fightObj.value + 1 > 100) {
+      fightObj.value = 100;
+    } else if (fightObj.value + 1 <= 100) {
+      fightObj.value += 1;
+    }
+
+    domManipulation.updateQuadrantValue('fight');
+  });
+
+  $('#button2-fight').click(() => {
+    const fightObj = data.getActivityObj('fight');
+
+    if (fightObj.value - 10 < 0) {
+      fightObj.value = 0;
+    } else if (fightObj.value - 10 >= 0) {
+      fightObj.value -= 10;
+    }
+
+    domManipulation.updateQuadrantValue('fight');
+  });
 };
 
 export default { buttonEvents };

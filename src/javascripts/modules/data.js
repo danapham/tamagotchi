@@ -36,11 +36,13 @@ const getActivityObj = (type) => {
 
   for (let i = 0; i < activities.length; i += 1) {
     if (activities[i].type === type) {
-      activityObj.push(activities[i]);
-    } else {
-      activityObj = {};
+      activityObj = activities[i];
     }
   }
+
+  return activityObj;
 };
+
+const updateValue = ()
 
 export default { getActivityObj, getActivities };

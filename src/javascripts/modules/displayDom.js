@@ -10,4 +10,9 @@ const showQuadrants = () => {
   buttonEvents.buttonEvents();
 };
 
-export default { showQuadrants };
+const showPet = () => {
+  $('#pet').html(`
+    <img src="src/images/racoon.png" alt="racoon illustration">`);
+};
+
+export default { showQuadrants, showPet };

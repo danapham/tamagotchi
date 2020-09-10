@@ -1,0 +1,19 @@
+body {
+  background-color: $body-background;
+  color: $text-color;
+  position: relative;
+  background-image: url('');
+};
+
+body:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .25;
+  background-image: url('https://docssewerandwater.com/wp-content/uploads/2016/05/bigstock-Abstract-Triangles-Pattern-Bac-94516874-e1463079024559.jpg');
+  background-size: cover;
+  z-index: -1;
+}

@@ -12,7 +12,7 @@ const showQuadrants = () => {
 
 const showPet = () => {
   $('#pet').html(`
-    <img src="src/images/racoon.png" alt="racoon illustration">`);
+    <img src="src/images/racoon.png" id="petImg" alt="racoon illustration">`);
 };
 
 export default { showQuadrants, showPet };

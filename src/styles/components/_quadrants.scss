@@ -1,8 +1,4 @@
 #app {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  align-items: space-between;
   height: 100%;
 }
 
@@ -15,11 +11,6 @@
   width: 0;
   height: 0;
   position: absolute;
-}
-
-#pet {
-  position: absolute;
-  margin: auto;
 }
 
 .quad {
